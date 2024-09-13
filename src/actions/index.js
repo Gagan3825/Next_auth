@@ -5,9 +5,6 @@ import { redirect } from "next/navigation";
 
 
 export async function handlegooglesignin(){
-    
-   const data= await signIn("google");
-   console.log("New data->",data);
-   
 
+   const data = await signIn("google", { redirectTo: '/home'});
 }

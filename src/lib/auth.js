@@ -45,7 +45,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           await connectmonogo();
           const aleradyuser=await User.findOne({email});
           if(!aleradyuser)await User.create({email,name,googleId:id});
-          console.log(aleradyuser);
+          // console.log(aleradyuser);
          
           
           return true;
@@ -53,11 +53,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           console.error("Error during Google sign-in:", error);
           throw new AuthError("Error while creating user");
         }
-       
 
       }
       return false;
     }
+  },
+  pages: {
+    signIn: '/auth/signin',
   }
  
 });

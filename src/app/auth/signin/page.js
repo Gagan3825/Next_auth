@@ -19,7 +19,7 @@ import { Label } from "@/components/ui/label";
 // import { handlegooglesignin } from "./googlesignin";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { handlegooglesignin } from "@/app/actions";
+import { handlegooglesignin } from "@/actions";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -33,7 +33,7 @@ const Signin = () => {
       body:JSON.stringify({email,password}),
       headers:{ "Content-Type": "application/json" },
     })
-    console.log(data);
+    // console.log(data);
     if(data.ok){
       const signInRes = await signIn("credentials", {
         email,
