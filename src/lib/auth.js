@@ -55,11 +55,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
 
       }
-      return false;
+      return true;
     }
   },
   pages: {
-    signIn: '/auth/signin',
+    signIn: '/auth/signup',
   }
- 
 });

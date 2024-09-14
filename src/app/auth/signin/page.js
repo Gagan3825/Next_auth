@@ -16,7 +16,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-// import { handlegooglesignin } from "./googlesignin";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { handlegooglesignin } from "@/actions";
@@ -60,15 +60,7 @@ const Signin = () => {
 
    
   };
-  // const handlegooglesignin = async (e) => {
-  //  const googlesignin= await signIn("google",{redirect:false});
-  //  if(googlesignin.ok){
-  //   router.push('/home');
-  //  }else{
-  //   alert("Google signin failed");
-  //  }
-
-  // };
+  
 
   return (
     <div className="flex h-screen justify-center items-center">
